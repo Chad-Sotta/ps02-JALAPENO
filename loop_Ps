@@ -1,0 +1,53 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // 1. Count Down from 10 to 1
+        Console.WriteLine("Countdown from 10 to 1:");
+        for (int i = 10; i >= 1; i--)
+        {
+            Console.WriteLine(i);
+        }
+
+        // 2. Print Odd Numbers between 1 and 50
+        Console.WriteLine("\nOdd numbers from 1 to 50:");
+        for (int i = 1; i <= 50; i += 2)
+        {
+            Console.WriteLine(i);
+        }
+
+        // 3. Power of a Number
+        Console.WriteLine("\nPower of a number:");
+        int baseNum = 2, exponent = 5; // example values
+        int result = 1;
+        for (int i = 1; i <= exponent; i++)
+        {
+            result *= baseNum;
+        }
+        Console.WriteLine($"{baseNum}^{exponent} = {result}");
+
+        // 4. Sum of Squares of first 10 natural numbers
+        Console.WriteLine("\nSum of squares of first 10 natural numbers:");
+        int sumSquares = 0;
+        for (int i = 1; i <= 10; i++)
+        {
+            sumSquares += i * i;
+        }
+        Console.WriteLine(sumSquares);
+
+        // 5. Sum of Odd Digits in a number
+        Console.WriteLine("\nSum of odd digits in a number:");
+        int number = 12345; // example number
+        int sumOddDigits = 0;
+        while (number > 0)
+        {
+            int digit = number % 10;
+            if (digit % 2 != 0)
+                sumOddDigits += digit;
+            number /= 10;
+        }
+        Console.WriteLine(sumOddDigits);
+    }
+}
