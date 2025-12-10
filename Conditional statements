@@ -1,0 +1,88 @@
+using System;
+
+class Program
+{
+  static void Main()
+  {
+  //Practice 01.1
+  int num = 4;
+  if (num % 2 == 0)
+  {
+    Console.WriteLine($"{num} is even");
+  }
+  else
+  {
+  Console.WriteLine($"{num} is odd");
+  }
+
+  //Practice 01.2
+  int number = 5;
+
+  if (number >= 0)
+  {
+    Console.WriteLine($"The number {number} is positive.");
+  }
+  else
+  {
+    Console.WriteLine($"The number {number} is negative.");
+  }
+
+  //Practice 01.3
+  int age = 30;
+  double income = 60000;
+
+  if (age >= 25 && age <= 35 && income > 50000)
+  {
+    Console.WriteLine("Young Professional");
+  }
+    else if (age >= 36 && age <= 55 && income > 70000)
+  {
+    Console.WriteLine("Middle-Aged Professional");
+  }
+    else if (age >= 56 && income < 30000)
+  {
+    Console.WriteLine("Senior Citizen");
+  }
+  else
+  {
+    Console.WriteLine("Other");
+  }
+
+  //Practice 01.4
+  int score = 65;
+
+  string result = (score >= 50) ? "Passed" : "Failed";
+
+  Console.WriteLine(result);
+
+  //Practice 01.5
+  Console.Write("Enter the radius of the circle: ");
+  double radius = Convert.ToDouble(Console.ReadLine());
+
+  Console.WriteLine("Choose an option:");
+  Console.WriteLine("A - Compute Area");
+  Console.WriteLine("P - Compute Perimeter");
+  Console.WriteLine("X - Exit");
+  Console.Write("Your choice: ");
+  char choice = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
+
+  if (choice == 'A')
+  {
+    double area = Math.PI * radius * radius;
+    Console.WriteLine($"The area of the circle is {area:F2}");
+  }
+  else if (choice == 'P')
+  {
+    double perimeter = 2 * Math.PI * radius;
+    Console.WriteLine($"The perimeter of the circle is {perimeter:F2}");
+  }
+  else if (choice == 'X')
+  {
+    Console.WriteLine("Exiting the program...");
+  }
+  else
+    {
+      Console.WriteLine("Invalid choice. Please enter A, P, or X.");
+    }
+  }
+}
